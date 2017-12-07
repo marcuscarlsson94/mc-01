@@ -329,10 +329,13 @@ SEKTIONER
   border-radius: 3px;
   z-index: 999999;
   margin-right: 10px;
-  // box-shadow: 0px 0px 5px 0px rgba(0,0,0,.05);
 
   &:hover .service_image {
     background-size: 110%;
+  }
+
+  &:hover .service_image:before {
+    display: block;
   }
 
   &:nth-child(3) {
@@ -352,6 +355,17 @@ SEKTIONER
   background-position: center;
   background-size: 100%;
   transition: .5s ease all;
+
+  &:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
+  }
   // box-shadow: 0px 0px 5px 0px rgba(0,0,0,.05);
 
   &_1 {
@@ -374,6 +388,11 @@ SEKTIONER
     }
   }
 
+}
+
+.title {
+  position: relative;
+  z-index: 10;
 }
 
 .partners {
