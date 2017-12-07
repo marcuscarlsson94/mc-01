@@ -48,12 +48,14 @@ h2 {
   font-weight: 900;
   margin: 10px 0;
 }
+
 h3 {
   font-family: 'Exo', sans-serif;
   font-size: 40px;
   font-weight: bold;
   margin: 10px 0;
 }
+
 h4 {
   font-family: 'Exo', sans-serif;
   font-size: 25px;
@@ -68,9 +70,9 @@ i {
 }
 
 header {
-  position: fixed;
+  position: relative;
   background: white;
-  box-shadow: 0px 0px 0px 5px rgba(0,0,0,.05);
+  box-shadow: 0 0 0 5px rgba(0,0,0,.05);
   border-radius: 3px;
   height: 90px;
   width: 90%;
@@ -85,12 +87,12 @@ header {
 
     li a {
       color: rgba(0,0,0,.75);
-      transition: .5s ease all;
+      transition: 0.5s ease all;
       font-family: 'Fira Sans Condensed', sans-serif;
       font-size: 19px;
 
       &:hover {
-        opacity: .7;
+        opacity: 0.7;
       }
     }
   }
@@ -104,11 +106,9 @@ section {
   z-index: 5;
   position: relative;
 }
-
 /*====
 REUSABLE
 ======*/
-
 .container {
   width: $container;
   margin: auto;
@@ -117,17 +117,14 @@ REUSABLE
 .container-min {
   width: $container-min;
 }
-
 /*====
 NAVBAR
 ======*/
-
 .logo {
   $logo: 120px;
-
   height: $logo;
   width: $logo;
-  transition: .2s ease all;
+  transition: 0.2s ease all;
 
   &:hover {
     transform: scale(1.05);
@@ -152,17 +149,15 @@ NAVBAR
   width: 215px;
   text-align: center;
   color: white;
-  transition: .5s ease all;
+  transition: 0.5s ease all;
 
   &:hover {
     transform: translateY(3px);
   }
 }
-
 /*====
 HERO
 ======*/
-
 .hero {
   position: relative;
   overflow: hidden;
@@ -171,7 +166,7 @@ HERO
   max-width: 1920px;
   min-height: 500px;
   // background: #2ca4fc url(./img/hero_overlay.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .8)), url(./img/hero.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .8)), url("./img/hero.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -180,7 +175,7 @@ HERO
     content: '';
     width: 150%;
     height: 15%;
-    background-image: url(./img/ruler.svg);
+    background-image: url("./img/ruler.svg");
     background-repeat: no-repeat;
     background-color: white;
     position: absolute;
@@ -194,23 +189,22 @@ HERO
     height: 109px;
     background-color: rgba(255, 255, 255, 0);
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
 
     p {
       color: white;
     }
     // transform: rotate(2deg);
-
     a {
-      transition: .3s ease all;
+      transition: 0.3s ease all;
+
       &:hover {
         text-decoration: line-through;
         color: #fff;
         transform: translateY(-3px);
       }
     }
-
   }
 }
 
@@ -220,9 +214,8 @@ HERO
   color: white;
 
   h2 {
-    text-shadow: 1px 0px 10px rgba(0,0,0,.2);
+    text-shadow: 1px 0 10px rgba(0,0,0,.2);
   }
-
 }
 
 .ruler-wrapper {
@@ -234,11 +227,9 @@ HERO
   margin: auto;
   color: white;
 }
-
 /*====
 BACKGROUND COMPONENTS
 ======*/
-
 .rounded-bg {
   position: relative;
   background-color: #f5f6f7;
@@ -252,12 +243,10 @@ BACKGROUND COMPONENTS
   top: -220px;
   transform: translateX(-50%);
 }
-
 /*====
 SEKTIONER
 ======*/
-
-.intro-wrapper {
+.highlight-box {
   width: 50%;
   height: 100%;
   max-height: 500px;
@@ -268,22 +257,8 @@ SEKTIONER
   position: relative;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0px 0px 50px 0px rgba(0,0,0,.05);
+  box-shadow: 0 0 50px 0 rgba(0,0,0,.05);
 }
-
-// .intro-wrapper {
-//   width: 50%;
-//   height: 100%;
-//   max-height: 600px;
-//   max-width: 1280px;
-//   margin-top: -40px;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   position: relative;
-//   background-color: white;
-//   border-radius: 2px;
-//   box-shadow: 0px 0px 10px 0px rgba(0,0,0,.10);
-// }
 
 .intro {
   padding: 50px 180px;
@@ -314,14 +289,12 @@ SEKTIONER
 .services {
   position: relative;
   height: 520px;
-  width:1280px;
+  width: 1280px;
   text-align: center;
   margin: 15px auto;
-
 }
 
 .service {
-
   position: relative;
   height: 520px;
   width: 420px;
@@ -341,20 +314,18 @@ SEKTIONER
   &:nth-child(3) {
     margin-right: 0;
   }
-
 }
 
 .service_image {
-
   height: 100%;
   width: 100%;
   border-radius: 3px;
   z-index: 999999;
-  transition: .3s ease all;
+  transition: 0.3s ease all;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  transition: .5s ease all;
+  transition: 0.5s ease all;
 
   &:before {
     content: "";
@@ -367,27 +338,27 @@ SEKTIONER
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
   }
   // box-shadow: 0px 0px 5px 0px rgba(0,0,0,.05);
-
   &_1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .8)), url('./img/side_01.png');
   }
+
   &_2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .8)), url('./img/side_02.png');
   }
+
   &_3 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .8)), url('./img/side_03.png');
   }
 
   h4 {
     color: white;
-    transition: .25s ease all;
+    transition: 0.25s ease all;
 
     &:hover {
       transform: translateY(-3px);
       text-decoration: none;
     }
   }
-
 }
 
 .title {
@@ -406,32 +377,64 @@ SEKTIONER
 }
 
 .testamonials {
-
   margin: 90px auto;
+}
+/*=====
+Quote
+=====*/
+.quote-wrapper {
+  width: 100%;
+  height: 500px;
+  background-image: url('./img/hero_1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
+  &:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(23, 153, 167, .8), rgba(23, 153, 167, .8));
+  }
 }
 
+.quote {
+  color: white;
+  position: relative;
+  z-index: 2;
+
+  &:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.quotation-mark {
+  font-size: 40px;
+}
 /*=====
 FOOTER
 =====*/
-
 .footer-wrapper {
   width: 100%;
   height: 600px;
   background-color: #1d1d1d;
 }
-
 /*====
 FLEX COMPONENTS
 ======*/
-
 .f {
   display: flex;
-
   @include tablet {
     display: block;
   }
-
   @include mobile {
     display: block;
   }
@@ -443,7 +446,8 @@ FLEX COMPONENTS
 }
 
 .f-b {
-  height: 83%;
+  height: 100%;
+  padding-bottom: 70px;
   align-items: flex-end;
   justify-content: center;
 }
