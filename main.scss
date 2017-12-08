@@ -290,26 +290,35 @@ SEKTIONER
 .services {
   position: relative;
   height: 520px;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   text-align: center;
   margin: 15px auto;
 }
 
 .service {
   position: relative;
-  height: 520px;
-  width: 420px;
+  height: 100%;
+  // width: 420px;
   overflow: hidden;
   border-radius: 3px;
   z-index: 999999;
   margin-right: 10px;
+  transition: .3s ease all;
 
   &:hover .service_image {
-    background-size: 110%;
+    // background-size: 110%;
+    transform: scale(1.1);
+
   }
 
   &:hover .service_image:before {
     display: block;
+  }
+
+  &:hover .title {
+    transform: translateY(-3px);
+    text-decoration: none;
   }
 
   &:nth-child(3) {
@@ -351,20 +360,16 @@ SEKTIONER
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .8)), url('./img/side_03.png');
   }
 
-  h4 {
-    color: white;
-    transition: 0.25s ease all;
-
-    &:hover {
-      transform: translateY(-3px);
-      text-decoration: none;
-    }
-  }
 }
 
 .title {
-  position: relative;
+  position: absolute;
   z-index: 10;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  transition: .3s ease all;
 }
 
 .partners {
@@ -444,6 +449,10 @@ FLEX COMPONENTS
 .f-c {
   align-items: center;
   justify-content: center;
+}
+
+.f-col {
+  flex: 1;
 }
 
 .f-b {
